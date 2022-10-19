@@ -1,6 +1,7 @@
 # File Transfer Website Using .Net Core
 
-The above code is for a website that is currently being hosted on the following link: http://nathanmizzi-001-site1.etempurl.com
+The above code is for a website that was currently being hosted on the following link: http://nathanmizzi-001-site1.etempurl.com
+This website is no longer running as the free hosting trial expired, however the code still works.
 
 This website aims to imitate the functionality provided by weTransfer, which essentially helps its users when transferring a file.
 
