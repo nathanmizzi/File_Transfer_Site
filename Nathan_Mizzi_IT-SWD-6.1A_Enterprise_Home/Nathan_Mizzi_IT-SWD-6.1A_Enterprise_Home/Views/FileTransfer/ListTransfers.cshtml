@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Application.ViewModels.FileTransferViewModel>
+
+@{
+    ViewData["Title"] = "ListTransfers";
+}
+
+<h1>List of your transfers: </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <h4>Recieved By</h4>
+            </th>
+            <th>
+                <h4>Sent By</h4>
+            </th>
+            <th>
+                <h4>Title</h4>
+            </th>
+            <th>
+                <h4>Message</h4>
+            </th>
+            <th>
+                <h4>File</h4>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RecipientEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SenderEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Message)
+            </td>
+            <td>
+                <a href=@($"{ViewBag.absoluteUri}{item.FilePath}")>Download</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
